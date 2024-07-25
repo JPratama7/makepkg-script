@@ -28,10 +28,7 @@ reflector --ipv4 --ipv6 -l 10 -f 10 -a 10 --protocol http,https --sort rate --sa
 pacman -Syyuu --noconfirm --needed git base-devel aria2-git
 
 # Copy entrypoint script
-cp entrypoint.sh /entrypoint.sh
+cp entrypoint.sh /bin/build.sh
 
 # Set entrypoint script as executable
-chmod +x /entrypoint.sh
-
-# Execute entrypoint script
-exec /entrypoint.sh
+chmod +x /bin/build.sh
